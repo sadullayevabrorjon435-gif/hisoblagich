@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mening Hisoblagich O'yinim</title>
+    
+    <style>
+        body {
+            background-color: #1e1e2e; /* Zamonaviy toq fon rangi */
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 80px;
+        }
+        
+        .card {
+            background-color: #2b2b3d;
+            width: 300px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        #son {
+            font-size: 60px;
+            margin: 20px 0;
+            color: #00ffcc; /* Oltin/Yashil rang simvolizatsiyasi */
+        }
+
+        button {
+            font-size: 24px;
+            font-weight: bold;
+            width: 60px;
+            height: 60px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 50%; /* Tugmalarni yumaloq qilish */
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .plus-btn {
+            background-color: #2ed573;
+            color: white;
+        }
+
+        .minus-btn {
+            background-color: #ff4757;
+            color: white;
+        }
+
+        button:active {
+            transform: scale(0.9); /* Bosilganda biroz kichiklashishi uchun */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>Hisoblagich</h2>
+        
+        <!-- Son ko'rinib turadigan joy -->
+        <div id="son">0</div>
+
+        <!-- Tugmalar -->
+        <button class="minus-btn" onclick="kamaytir()">-</button>
+        <button class="plus-btn" onclick="oshir()">+</button>
+    </div>
+
+    <script>
+        // Sonni xotirada saqlash uchun o'zgaruvchi (variable)
+        let hisob = 0;
+
+        // Sonni 1 ga oshiradigan funksiya
+        function oshir() {
+            hisob = hisob + 1; // hisobga 1 qo'shamiz
+            document.getElementById("son").innerText = hisob; // Ekranga chiqaramiz
+        }
+
+        // Sonni 1 ga kamaytiradigan funksiya
+        function kamaytir() {
+            hisob = hisob - 1; // hisobdan 1 ayiramiz
+            document.getElementById("son").innerText = hisob; // Ekranga chiqaramiz
+        }
+    </script>
+
+</body>
+</html>
